@@ -52,8 +52,20 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(500, 700);
-
+  //createCanvas(500, 700);
+var isMobile=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+if(isMobile){
+canW=displayWidth;
+canH=displayHeight;
+createCanvas(displayWidth+80,displayHeight)  
+}
+else{
+  canW=windowWidth;
+  canH=windowHeight;
+  createCanvas(windowWidth,windowHeight)
+}
+}
+  
   frameRate(80);
 
   bk_song.play();
