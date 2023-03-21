@@ -64,7 +64,7 @@ else{
   canH=windowHeight;
   createCanvas(windowWidth,windowHeight)
 }
-}
+
   
   frameRate(80);
 
